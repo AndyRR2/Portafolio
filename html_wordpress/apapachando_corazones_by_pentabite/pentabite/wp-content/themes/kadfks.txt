@@ -1,0 +1,19 @@
+@media all and (min-width:320px) and (max-width:500px){
+    [data-row-id] .row {
+        display: flex !important;
+        flex-direction: column !important;
+        min-height: var(--height,auto) !important;
+    }
+        [data-row-id] .row{
+            display: block !important;
+        }
+        
+    }
+--------------------------------------
+
+<?php
+add_action('wp_enqueue_scripts', 'enqueue_parent_styles');
+function enqueue_parent_styles() {
+wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style-main-new.css');
+}
+?>

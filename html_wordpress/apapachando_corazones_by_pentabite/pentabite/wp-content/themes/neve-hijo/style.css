@@ -1,0 +1,506 @@
+/*
+Theme Name: Neve Child
+Template: neve
+Description:    Neve is a super fast, easily customizable, multi-purpose theme. It’s perfect for blogs, small business, startups, agencies, firms, e-commerce shops (WooCommerce storefront) as well as personal portfolio sites and most types of projects. A fully AMP optimized and responsive theme, Neve will load in mere seconds and adapt perfectly on any viewing device. While it is lightweight and has a minimalist design, the theme is highly extendable, it has a highly SEO optimized code, resulting in top rankings in Google search results. Neve works perfectly with Gutenberg and the most popular page builders (Elementor, Brizy, Beaver Builder, Visual Composer, SiteOrigin, Divi). Neve is also WooCommerce ready, responsive, RTL & translation ready. Look no further. Neve is the perfect theme for you!
+Text Domain:    neve
+*/  
+ 
+/*-----------Inicio-Header----------- */
+    .nv-nav-search {
+        box-shadow: 0px 0px 5px rgb(0, 0, 0, 0.407);
+    }
+    #menu-item-67 > a::before{
+        font-family: 'icomoon';
+        content:"\e900";
+        margin-right: 0.2em;
+    }
+    #menu-item-69 a::before{
+        font-family: 'icomoon';
+        content:"\e9b8";
+        margin-right: 0.2em;
+    }
+    .sub-menu a::before{
+        display: none;
+    }
+    #menu-item-174 a::before{
+        font-family: 'icomoon';
+        content:"\e998";
+        margin-right: 0.2em;
+    }
+    #menu-item-175 a::before{
+        font-family: 'icomoon';
+        content:"\e99f";
+        margin-right: 0.2em;
+    }
+    #menu-item-816 a::before{
+        font-family: 'icomoon';
+        content:"\e942";
+        margin-right: 0.2em;
+    }
+    #menu-item-1616 a::before {
+        font-family: 'icomoon';
+        content: "\e91a";
+        margin-right: 0.2em;
+    }
+    #menu-item-1224 a::before{
+        font-family: 'icomoon';
+        content: "\ea92";
+        margin-right: 0.2em;
+    }
+    #menu-item-1697 {
+        margin-left: 3em !important;
+    }
+    #menu-item-1697 a::after {
+        font-family: 'icomoon';
+        content: "\ea0a";
+        margin-left: 0.4em;
+    }
+    header{
+        min-width:100% !important;  
+    }
+    .site-title{
+        color: rgb(253, 103, 177);
+    }
+    #nv-primary-navigation-main li a{
+        text-decoration: none;
+        background-image: linear-gradient(currentColor, currentColor);
+        background-position: 0% 100%;
+        background-repeat: no-repeat;
+        background-size: 0% 2px;
+        transition: background-size .3s;
+        color: black;
+    }
+    #nv-primary-navigation-main li a:hover, #nv-primary-navigation-main li a:focus{
+        background-size: 100% 2px;
+        background-color: rgb(252, 82, 170) !important;
+        color: black !important;
+    }
+    /* -----------Fin-Header----------- */
+
+    /* -----------Inicio-Pagina-Principal----------- */
+    h1,h2,h3,h4,h5,h6,p,a,div{
+        font-family: 'Open Sans', sans-serif;
+    }
+    body {
+        background-image: url(../neve-hijo/logo/wordpressfondo_page-0001.jpg);
+        background-position: 100% 100%;
+        background-repeat: no-repeat !important;
+        background-attachment: fixed !important;
+        background-size: 30% !important;
+    }
+    .wp-container-8 .wp-container-5{
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.407) !important;
+    }
+    .wp-container-8 .wp-container-7{
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.407) !important;
+    }
+    .wp-block-media-text__content .wp-container-10{
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.407) !important;
+    }
+    .page-id-16 body{
+        background-image: none;
+    }
+    .wp-block-columns {
+        margin-bottom: 0 !important;
+    }
+    .wp-block-column {
+        display: block !important;
+    }
+    h3 {
+        margin-bottom: 10px !important;
+     }
+    .wp-block-cover__inner-container p{
+        color: rgb(241, 255, 240) !important;
+        opacity: 100% !important;
+    }
+    .has-neve-link-hover-color-background-color:hover, .has-neve-link-hover-color-background-color:focus{
+        background-color:rgb(199, 0, 99) !important;
+    }
+    .wp-block-button__link:hover, .wp-block-button__link:focus{
+        background-color:rgb(199, 0, 99) !important;
+    }
+    .is-style-secondary .wp-block-button__link:hover, .is-style-secondary .wp-block-button__link:focus{
+        background-color:rgb(255, 255, 97) !important;
+    }
+    .wp-block-media-text {
+        box-shadow: 0 0 15px  rgba(0, 0, 0, 0.407);
+    }
+    /* -----------Fin-Pagina-Principal----------- */
+
+    /* -----------Inicio-Novedades----------- */
+    .article-content-col .content{
+        padding-bottom: 0 !important;
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        align-items: flex-start !important;
+    }
+    .post {
+        background-color: rgba(255, 255, 255, 0.504);
+        box-shadow: 0 0 15px  rgba(0, 0, 0, 0.407);
+    }
+    .post p a{
+        color: blue;
+    }
+    .post .nv-post-thumbnail-wrap{
+        width: 40%;
+        min-width: 40%;
+        margin: 1.5em !important;
+    }
+    .posts-wrapper, .nv-index-posts {
+        margin-bottom: 0;
+    }
+    .entry-content .wp-container-5{
+        box-shadow: 0 0 15px  rgba(0, 0, 0, 0.407)
+    }
+    .entry-content .wp-container-10{
+        box-shadow: 0 0 15px  rgba(0, 0, 0, 0.407);
+    }
+    .entry-content .wp-container-7{
+        box-shadow: 0 0 15px  rgba(0, 0, 0, 0.407);
+    }
+    .wp-container-6 .wp-container-5{
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.407) !important;
+    }
+    .wp-container-11 .wp-container-10{
+        box-shadow: 0 0 0 0  rgba(0, 0, 0, 0.407);
+    }
+    .wp-block-media-text__content .wp-container-7{
+        box-shadow: 0 0 0 0  rgba(0, 0, 0, 0.407);
+    }
+    .non-grid-content{
+        margin: 1.5em !important;
+        margin-top: 2em !important;
+    }
+    #content .nv-page-title h1, #content .nv-page-title p{
+        display: none !important;
+    }
+    .author-name a{
+        color: blue !important;
+    }
+    .author-name a:hover, .author-name a:focus{
+        color: rgb(253, 103, 177) !important;
+    }
+
+    /* -----------Fin-Novedades----------- */
+
+    /* -----------Inicio-Cargar-Novedades----------- */
+    #tab1_login, #tab3_login {
+        border: 0.05em solid rgba(0, 0, 0, 0.301) !important;
+    }
+    #usp-login .user-logged-in::after{
+        content: "Sesion Iniciada" !important;
+    }
+    #usp-submit input{
+        border-radius: 100px;
+    }
+    #usp-submit input:hover, #usp-submit input:focus{
+        background-color: rgb(199, 0, 99) !important;
+    }
+    #usp-login a{
+        color: blue !important;
+    }
+    #usp-login a:hover, #usp-login a:focus{
+        color: rgb(253, 103, 177) !important;
+    }
+    #user-submitted-image a{
+        color: blue;
+    }
+    #user-submitted-image a:hover, #user-submitted-image a:focus{
+        color: rgb(252, 82, 170) !important;
+    }
+    #usp-login .user-logged-in h3{
+        display: none !important;
+    }
+    #usp-login{
+        border-radius: 3% !important;
+        box-shadow: 0 0 15px  rgba(0, 0, 0, 0.407);
+        max-width: 290px !important;
+    }
+    .user-logged-in{
+        border:0.05em solid rgba(0, 0, 0, 0.226);
+        width: 100% !important;  
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important; 
+    }
+    #usp-login .user-logged-in::before{
+        content: "Iniciar Sesion" !important;
+    }      
+   
+    label{
+        display: none !important;
+    }
+    .usp-checkbox label{
+        display: block !important;
+    }
+    .usp-title:before{
+        content: "Titulo de la publicación *";
+    }
+    .usp-tags:before{
+        content: "Etiquetas *";
+    }
+    .usp-category:before{
+        content: "Seleccionar Categoría *";
+    }
+    #usp-login p, #usp-login a{
+        color: black;
+    }
+    #usp-login a:focus, #usp-login a:hover{
+        background-color: rgb(255, 196, 226) !important;
+    }
+    /***/
+    .user-info :first-child, .user-info a:first-child, #tab1_login h3, #tab1_login p, #tab3_login h3, #tab3_login p, .tabs_login_1 a, .tabs_login_3 a {
+        visibility: hidden !important;
+    }
+    .tabs_login_1 a::before{
+        visibility: visible;
+        content: "Iniciar";
+    }
+    .tabs_login_3 a::before{
+        visibility: visible;
+        content: "No recuerdo";
+    }
+    .user-info p:first-child::after{
+        content: "Felicitaciones, iniciaste sesion.";
+        visibility: visible;
+    }
+    .user-info a:first-child:after{
+        content: "Cerrar sesion";
+        visibility: visible;
+    }
+    #tab1_login h3::before{
+        visibility: visible;
+        content: "Iniciar sesion";
+    }
+    #tab3_login h3::before{
+        visibility: visible;
+        content: "¿Olvidaste tu contraseña?";
+    }
+    #tab1_login p::before{
+        visibility: visible;
+        content: "¡Postea y carga novedades a la pagina!";
+    }
+    #tab3_login p::before{
+        visibility: visible;
+        content: "Ingresa tu nombre de usuario o correo electronico para recuperarla.";
+    }
+    .component-wrap{
+        display: flex !important;
+        justify-content: center !important;
+    }
+    #menu-item-69 ul, #menu-item-1616 ul{
+        box-shadow: 0 0 5px rgb(0, 0, 0);
+    }  
+    .wp-block-buttons a:hover, .wp-block-buttons a:focus{
+        color: rgb(1, 1, 1) !important;
+    }
+    .header{
+        border-radius: 3% !important;
+        box-shadow: 0 0 15px  rgba(0, 0, 0, 0.407);
+    }
+    /* -----------Fin-Cargar-Novedades----------- */
+
+    /* -----------Inicio-Plugin-Instagram----------- */
+    .zoom-instagram-widget__footer a:hover, .zoom-instagram-widget__footer a:focus{
+        background-color: rgb(199, 0, 99) !important;
+    }
+    .zoom-instagram-widget__header-bio{
+    color: rgba(0, 0, 0, 0.392) !important;
+    font-size: medium !important;
+    }
+    .zoom-instagram-widget__header-user a{
+        color: blue !important;
+        font-size: medium !important;
+    }
+    .zoom-instagram-widget__header-user a:hover, .zoom-instagram-widget__header-user a:focus{
+        color: rgb(253, 103, 177) !important;
+    }
+    .zoom-instagram-widget__footer a{
+        background-color: rgb(252, 82, 170) !important;
+        font-size: large !important;
+    }
+    /* -----------Fin-Plugin-Instagram----------- */
+
+    /* -----------Inicio-Como-Ayudar----------- */
+    .wp-container-7 p {
+        padding: 0em !important;
+    }
+    /* -----------Fin-Como-Ayudar----------- */
+
+    /* -----------Inicio-Donar----------- */
+    #content{
+        padding-bottom: 2em !important;
+    }
+    .wp-container-13 .wp-container-11{
+        box-shadow: 0 0 15px  rgba(0, 0, 0, 0.407);
+        border-radius: 10% !important;
+    }
+    .wp-container-20 .wp-container-16{
+        box-shadow: 0 0 15px  rgba(0, 0, 0, 0.407);
+        border-radius: 10% !important;
+    }
+    .wp-container-19 .wp-container-17{
+        box-shadow: 0 0 15px  rgba(0, 0, 0, 0.407);
+        border-radius: 10% !important;
+    }
+    /* -----------Fin-Donar----------- */ 
+
+    /* -----------Inicio-Footer----------- */
+    .component-wrap a {
+        display: none !important;
+    }
+    .component-wrap p::before {
+        content: "Apapachando Corazones";
+    }
+    .component-wrap p::after {
+        content: "Pentabite";
+    }
+    .wp-block-column p a{
+        color: blue !important;
+    }
+    .widget {
+        margin-bottom: 0px !important;
+    }
+    .site-footer p a{
+        color: rgb(0, 0, 0) !important;
+    }
+    .site-footer {
+        border-radius: 3% !important;
+        box-shadow: 0 0 15px  rgba(0, 0, 0, 0.407);
+    }
+    /* -----------Fin-Footer----------- */
+    
+    /****inicio-celular****/
+    @media all and (min-width:320px) and (max-width:500px)
+    {
+        .post .nv-post-thumbnail-wrap{
+            width: 90%;
+            min-width: 90%;
+        }
+        [data-row-id] .row {
+            display: flex !important;
+            flex-direction: column !important;
+            min-height: var(--height,auto) !important;
+        }
+        [data-row-id] .row{
+            display: block !important;
+        }
+        .wp-container-9 p{
+            margin-bottom: 1em !important;
+        }
+        .site-title{
+            font-size: 1.4em !important;
+        }
+        small {
+            font-style: oblique !important;
+        }
+        .wp-block-cover__inner-container h1{
+            font-size: 2em;   
+        }
+        .wp-block-cover__inner-container p{
+            font-size: 0.9em !important;
+        }
+        .wp-block-media-text .wp-block-media-text__content p{
+            font-size: 0.9em !important;
+        }
+        .wp-block-media-text .wp-block-media-text__content .has-medium-font-size p{
+            font-size: medium !important;  
+        }
+        .nav-toggle-label, .bars{
+            font-size: 1.5em !important;
+        }
+        p{
+            margin-bottom: 0.5em !important;
+            font-size: 1em !important; 
+        }
+        .wp-block-image {
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+        h3 {
+            margin-bottom: 0px !important;
+        }
+        .wp-container-6 {
+            gap: 1em !important;
+        }
+        body {
+            line-height:normal !important;
+        }
+        blockquote {
+            margin-top: 0px !important;
+            margin-bottom: 0px !important;
+        }
+        h2{  
+            margin-bottom: 10px !important;
+        }
+        .wp-block-image {
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+        .wp-block-spacer {
+            height: 15px !important ;
+        } 
+        .article-content-col .content {
+            display: flex !important;
+            flex-direction: column !important;
+        }
+    }
+    /****fin-celuelar****/
+
+    /****Inicio-Otras-Resoluciones****/
+    @media all and (min-width:501px)
+    {
+        .wp-block-image {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        } 
+        .wp-container-6 {
+            gap: 0.5em !important;
+        }
+        .wp-block-columns p{
+            margin-bottom: 1em !important;
+        }
+        .nav-toggle-label, .bars{
+            font-size: 1.4em !important;
+        }
+        small {
+            font-style: oblique !important;
+        }
+        .site-title{
+            font-size: 1.5em !important;
+        }
+    }
+    @media all and (min-width: 950px) {
+        .builder-item {
+            padding-right: 20px !important;
+            padding-left: 10px !important;
+        }
+        .hfg-is-group {
+            margin-left: 1em !important;
+        }
+        .item--inner .builder-item--primary-menu .has_menu{
+            min-width: 100% !important;
+        }
+        .container {
+            width: 100%;
+            padding-right: 0px;
+        }
+        [data-row-id] .row {
+            display: flex !important;
+            flex-direction: row !important;
+            grid-template-columns: none !important;
+            flex-wrap: unset !important;
+        }
+        .nv-nav-wrap {
+            margin-right: 1em;
+        }
+        .row {
+            display: flex !important;
+            justify-content: center !important;
+        }
+        .nav-ul {
+            flex-wrap: wrap !important;
+        }
+    }
+    /****Fin-Otras-Resoluciones****/
