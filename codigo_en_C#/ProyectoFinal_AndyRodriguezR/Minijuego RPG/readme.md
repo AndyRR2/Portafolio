@@ -1,39 +1,65 @@
-**** Reglas y explicación del juego: ****
+# 🕹️ RPG Console Game — C# Project
 
--Se trata de un Juego RPG para 1 solo jugador, donde el usuario selecciona una clase de personaje entre (Guerrero, Mago y Asesino), cada clase tiene un total de 60 puntos de atributos iniciales que están distribuidos de forma diferente según la clase elegida y las estadísticas del personaje se calculan según estos atributos.
+Single-player RPG console game where the player chooses a class and progresses through battles, leveling up, collecting items, and facing increasingly difficult enemies. The project focuses on gameplay logic, stats calculation, enemy scaling, and basic data persistence.
 
--Ganas cuando derrotas los 10 enemigos y pierdes cuando pierdes toda la salud. -Puedes abandonar la partida en mitad del juego y continuar donde te quedaste en otro momento. 
--Si ganas o pierdes, al salir del juego se borran los datos de tu personaje, solo quedan guardados si aún no has terminado.
+## Game Overview
 
--Al comenzar el juego se empieza en nivel 1 de personaje y se genera aleatoriamente (usando una API) cada parte de tu armadura y armas iniciales según tu clase. 
--(Los objetos de equipo generados o dropeados no aportan nada a las estadísticas, es solo una mecánica de estética).
+- Choose between **Warrior**, **Mage**, or **Assassin**  
+- Each class starts with **60 attribute points**, distributed differently  
+- Character statistics are fully calculated from attributes and level  
+- Win by defeating **all 10 enemies**  
+- Lose when your HP reaches 0  
+- You can **exit the game mid-run**, and your progress is saved  
+- If you win or lose, the character data is deleted automatically
 
--Luego se generan 10 enemigos de nivel 1 aleatoriamente con los cuales hay que combatir, cuando un enemigo es abatido, todos los otros suben un nivel y por lo tanto todas sus estadísticas de manera que aumenta la dificultad, además te dropea un objeto nuevo aleatorio y es reemplazado en tu equipo por el del mismo tipo (Ej: si dropea un Casco lo reemplaza por el Casco que ya tenías).
+## Features
 
--Cada vez que un enemigo muere ganas experiencia igual a la salud de ese enemigo, al acumular cierta cantidad de experiencia subes de nivel. 
--Cando subes de nivel te curas hasta el máximo de PV, se te regenera todo el PM gastado y obtienes 3 puntos de atributos para distribuir como quieras, cada vez es más difícil subir de nivel.
+- **Randomized starting equipment**, generated through an external API (cosmetic only)  
+- **10 procedurally generated enemies**, all starting at level 1  
+- When an enemy is defeated:
+  - All remaining enemies **increase their level**  
+  - You gain EXP equal to the enemy’s HP  
+  - You receive a **random equipment item** that replaces your current one  
+- **Leveling system:**  
+  - HP and MP fully restored  
+  - +3 attribute points to distribute  
+  - Exp requirements increase per level  
+- **Combat menu** with 4 actions:
+  1. **Basic Attack**  
+  2. **Power Attack** (MP cost, stronger)  
+  3. **Escape**  
+  4. **Heal** (MP cost, restores a percentage of HP and MP)
 
--Cuenta con un menú de combate con 4 opciones, 1-ataque básico, 2-poder, 3-escapar y 4-curarse, las opciones de curarse y poder tienen un costo de PM 
--Si intentas usar poder o curarte y no tienes suficiente PM, tu acción falla y pierdes el turno, pero el enemigo si te ataca a ti.
+## Formulas Used
 
--Menú de combate: 
-1-Atacar: ataque básico, basado en los atributos y nivel 
-2-Poder: ataque más fuerte, basado en ataque, atributos y nivel 
-  Costo: 35 % PM_maximo (para Mago el Costo se reduce un 50%) 
-3-Escapar: sales del combate 
-4-Curarse: te cura una parte de tu salud, basado en la cantidad de PV y cantidad de PM 
-  Costo: 25 % PM_maximo (para Mago el Costo se reduce un 50%)
+**Health (HP):** `Strength×10 + Dexterity×5 + Intelligence×3 + Level×200`  
+**Mana (MP):** `Intelligence×10 + Level×100`  
+**Attack:** `Dexterity×10 + Strength×5 + Intelligence×3 + Level×10`  
+**Power Attack:** `Attack + Intelligence×10 + Dexterity×5 + Strength`  
+**Defense:** `Strength×10 + Dexterity×5 + Intelligence×3 + Level×10`  
+**Heal Amount:** `30% HP + 30% MP`  
 
--Cálculo de estadísticas y acciones: 
-Salud: Fuerza10 + Destreza5 + Inteligencia3 + nivel200; 
-Mana: Inteligencia10 + nivel100; 
-Ataque: Destreza10 + Fuerza5 + Inteligencia3 + nivel10; 
-Poder: Ataque + Inteligencia10 + Destreza5 + Fuerza 
-Defensa: Fuerza10 + Destreza5 + Inteligencia3 + nivel10; 
-Curarse: 30 % PV + 30 % PM
+**MP Costs:**  
+- Power Attack: **35% of max MP** (Mage pays 50% less)  
+- Heal: **25% of max MP** (Mage pays 50% less)  
 
-Consejos de como jugar para ganar: 
--Elige bien el momento para usar el poder o curarte. 
--Trata de gastar todo tu PM ya sea en el poder o curándote cuando estes a punto de subir de nivel ya que luego se regenera todo. 
--Con enemigos de alto nivel dependiendo de la clase puede ser más útil curarse varias veces en vez de usar el poder.
+If you try to use Power or Heal with insufficient MP, you **lose the turn** and the enemy attacks.
+
+## 🎮 Gameplay Tips
+
+- Use Power Attack or Heal at the right moment  
+- Before leveling up, try to **spend most of your MP**, since it fully restores  
+- With high-level enemies, **healing multiple times** can be stronger than using Power Attack  
+- Mages have very efficient MP usage — take advantage of it  
+
+## 🚀 Project Goal
+
+This project was created to practice:
+
+- C# object-oriented programming  
+- Game logic and balancing  
+- Random generation mechanics  
+- Data persistence  
+- Combat system design
+
 
