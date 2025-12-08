@@ -1,0 +1,32 @@
+{
+  "Description": {
+    "Name": "Andy",
+    "Nickname": "Gearfried",
+    "Birthdate": "1997-01-01T00:00:00",
+    "Age": 28
+  },
+  "Attributes": {
+    "Caption": "        \n                \\  @\n                 \\/█|██|\n                 _/ \\_",
+    "Type": "Warrior",
+    "Intelligence": 10,
+    "Dexterity": 20,
+    "Strength": 30,
+    "Level": 1,
+    "Defense": 540,
+    "Attack": 490,
+    "Health": 1630,
+    "Mana": 500,
+    "Exp": 0
+  },
+  "Equipment": {
+    "Helmet": "Helm of Brilliance",
+    "Chest": "Mithral Armor",
+    "Gloves": "Rags Gauntlets",
+    "Belt": "Belt of Dwarvenkind",
+    "Boots": "Boots of Levitation",
+    "Ring": "Ring of Force Resistance",
+    "Amulet": "Amulet of the Planes",
+    "LeftHand": "Arrow-Catching Shield",
+    "RigthHand": "Dancing Sword"
+  }
+}
