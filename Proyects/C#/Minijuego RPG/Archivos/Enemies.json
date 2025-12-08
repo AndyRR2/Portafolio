@@ -1,0 +1,106 @@
+[
+  {
+    "Description": {
+      "Type": "Undead",
+      "Name": "Undead ancient"
+    },
+    "Attributes": {
+      "Caption": "                                   _/_/_/_/_\n                                  |__      |\n                                   _°|    _|\n                                   \\    _/_______\n                                   nn¨¨\\\\__|__|_\n                                    nn..//\n                                    \\___/",
+      "Level": 3,
+      "Defense": 245,
+      "Attack": 300,
+      "Healt": 2269
+    }
+  },
+  {
+    "Description": {
+      "Type": "Undead",
+      "Name": "Undead ghostly"
+    },
+    "Attributes": {
+      "Caption": "                                   _/_/_/_/_\n                                  |__      |\n                                   _°|    _|\n                                   \\    _/_______\n                                   nn¨¨\\\\__|__|_\n                                    nn..//\n                                    \\___/",
+      "Level": 3,
+      "Defense": 95,
+      "Attack": 90,
+      "Healt": 900
+    }
+  },
+  {
+    "Description": {
+      "Type": "Demon",
+      "Name": "Demon frozen"
+    },
+    "Attributes": {
+      "Caption": "                                    /\\      /\\\n                                  _/ /      \\ \\\n                                 / \\ \\______/ /\\\n                                 \\ o    o  /_/ /\n                                 / ..       __ \\___ \n                                 \\VVVVVVVV\\/   / /\n                                     |___|  __\\_\\_\n                                    /VVVVV\\ /    \n                                    \\______/",
+      "Level": 3,
+      "Defense": 85,
+      "Attack": 100,
+      "Healt": 1000
+    }
+  },
+  {
+    "Description": {
+      "Type": "Dragon",
+      "Name": "Dragon of blood"
+    },
+    "Attributes": {
+      "Caption": "                                     /\\____/\\/\\/\\/\\/\\\n                                    / °    o  ///  \n                                    vvvvv¨¨\\  \\\\\\ D_D_D\n                                    vvvvv../ /_/_/_/_\n                                    \\________/",
+      "Level": 3,
+      "Defense": 105,
+      "Attack": 110,
+      "Healt": 1100
+    }
+  },
+  {
+    "Description": {
+      "Type": "Dragon",
+      "Name": "Dragon of blood"
+    },
+    "Attributes": {
+      "Caption": "                                     /\\____/\\/\\/\\/\\/\\\n                                    / °    o  ///  \n                                    vvvvv¨¨\\  \\\\\\ D_D_D\n                                    vvvvv../ /_/_/_/_\n                                    \\________/",
+      "Level": 3,
+      "Defense": 105,
+      "Attack": 110,
+      "Healt": 1100
+    }
+  },
+  {
+    "Description": {
+      "Type": "Demon",
+      "Name": "Demon from the abyss"
+    },
+    "Attributes": {
+      "Caption": "                                    /\\      /\\\n                                  _/ /      \\ \\\n                                 / \\ \\______/ /\\\n                                 \\ o    o  /_/ /\n                                 / ..       __ \\___ \n                                 \\VVVVVVVV\\/   / /\n                                     |___|  __\\_\\_\n                                    /VVVVV\\ /    \n                                    \\______/",
+      "Level": 3,
+      "Defense": 85,
+      "Attack": 100,
+      "Healt": 1000
+    }
+  },
+  {
+    "Description": {
+      "Type": "Undead",
+      "Name": "Undead incendiary"
+    },
+    "Attributes": {
+      "Caption": "                                   _/_/_/_/_\n                                  |__      |\n                                   _°|    _|\n                                   \\    _/_______\n                                   nn¨¨\\\\__|__|_\n                                    nn..//\n                                    \\___/",
+      "Level": 3,
+      "Defense": 95,
+      "Attack": 90,
+      "Healt": 900
+    }
+  },
+  {
+    "Description": {
+      "Type": "Demon",
+      "Name": "Demon ancient"
+    },
+    "Attributes": {
+      "Caption": "                                    /\\      /\\\n                                  _/ /      \\ \\\n                                 / \\ \\______/ /\\\n                                 \\ o    o  /_/ /\n                                 / ..       __ \\___ \n                                 \\VVVVVVVV\\/   / /\n                                     |___|  __\\_\\_\n                                    /VVVVV\\ /    \n                                    \\______/",
+      "Level": 3,
+      "Defense": 85,
+      "Attack": 100,
+      "Healt": 1000
+    }
+  }
+]
