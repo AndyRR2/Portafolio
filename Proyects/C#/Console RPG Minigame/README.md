@@ -2,7 +2,7 @@
 
 Single-player RPG console game where the player chooses a class and progresses through battles, leveling up, collecting items, and facing increasingly difficult enemies. The project focuses on gameplay logic, stats calculation, enemy scaling, and basic data persistence.
 
-# Step-by-Step Guide
+# Guide
 
 To run the game, .NET 6 or a later version must be installed on your computer.
 
