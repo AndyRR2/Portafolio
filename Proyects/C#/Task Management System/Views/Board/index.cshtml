@@ -1,0 +1,55 @@
+@{
+    ViewData["Title"] = "Boards";
+}
+
+@model List<Proyect.ViewModels.ListBoardViewModel>
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="table-container">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <div class="action-buttons">
+                    <th>
+                        <a class="btn btn-success" asp-controller="Board" asp-action="AddBoard">Add Board</a>
+                        <a class="btn btn-info" asp-controller="UseR" asp-action="Index" asp-route-idBoard=null>Return to Users</a>
+                    </th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th>
+                        <a class="btn btn-info" asp-controller="TasK" asp-action="Index" asp-route-idBoard=null>See all Tasks (Administrator)</a>
+                    </th>
+                </div>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>User Propietary</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var board in Model)
+            {
+                <tr>
+                    <td>@board.Name</td>
+                    <td>@board.Description</td>
+                    <td>@(board.IdPropietaryUser != null ? board.PropietaryUserName : "No Assigned")</td>
+                    <td>@board.BoardStatus</td>
+                    <td>
+                        <div class="action-buttons">
+                            <a class="btn btn-info" asp-controller="TasK" asp-action="Index" asp-route-idBoard="@board.Id">See Tasks</a>
+                            <a class="btn btn-primary" asp-controller="Board" asp-action="EditBoard" asp-route-idBoard="@board.Id">Edit</a>
+                            <a class="btn btn-danger" asp-controller="Board" asp-action="DeleteBoard" asp-route-idBoard="@board.Id" onclick="return confirm('Are you sure you want to delete the item?')">Delete</a>      
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+@section Scripts {<partial name="_ValidationScriptsPartial" />}

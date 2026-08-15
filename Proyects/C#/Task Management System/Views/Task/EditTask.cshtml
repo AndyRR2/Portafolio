@@ -1,0 +1,69 @@
+@{ 
+    ViewData["Title"] = "Edit TasK";
+}
+
+@model Proyect.ViewModels.EditTaskViewModel
+
+<h1>@ViewData["Title"]</h1>
+<form asp-controller="TasK" asp-action="EditTaskFromForm" method="post">
+    <input hidden asp-for="@Model.Id">
+    <div class="form-group" style="max-width: 200px;">
+        <label asp-for="@Model.IdBoard"></label>
+        <select asp-for="@Model.IdBoard" class="form-control">
+            <option value="">Select Board</option>
+            @foreach (var board in Model.Boards)
+            {
+                <option value="@board.Id">@board.Name</option>
+            }
+        </select>
+        <span asp-validation-for="@Model.IdBoard" class="text-danger"></span>
+    </div>
+    <div class="form-group" style="max-width: 200px;">
+        <label asp-for="@Model.Name"></label>
+        <input asp-for="@Model.Name" class="form-control" id="name" />
+        <span asp-validation-for="@Model.Name" class="text-danger"></span> 
+    </div>
+    <div class="form-group" style="max-width: 200px;">
+        <label asp-for="@Model.TaskStat"></label>
+        <select asp-for="@Model.TaskStat" asp-items="Html.GetEnumSelectList<TaskStat>()" class="form-control">
+            <option value="">Select Status</option>
+        </select>
+        <span asp-validation-for="@Model.TaskStat" class="text-danger"></span> 
+    </div>
+    <div class="form-group" style="max-width: 200px;">
+        <label asp-for="@Model.Description"></label>
+        <input asp-for="@Model.Description" class="form-control" id="description" />
+        <span asp-validation-for="@Model.Description" class="text-danger"></span> 
+    </div>
+    <div class="form-group" style="max-width: 200px;">
+        <label asp-for="@Model.Color"></label>
+        <ul class="color-list">
+            @foreach (var color in Enum.GetValues(typeof(Proyect.Models.Color)))
+            {
+                <li class="@color.ToString()">
+                    <input type="radio" name="color" value="@color" 
+                        @(Model.Color.ToString() == color.ToString() ? "checked" : "")>
+                    <label for="@color.ToString()" class></label>
+                </li>
+            }
+        </ul>
+        <span asp-validation-for="@Model.Color" class="text-danger"></span> 
+    </div>
+    <div class="form-group" style="max-width: 200px;">
+        <label asp-for="@Model.IdPropietaryUser">User Propietary</label>
+        <select asp-for="@Model.IdPropietaryUser" class="form-control">
+            <option value="">Select Propietary</option>
+            @foreach (var user in Model.Users)
+            {
+                <option value="@user.Id">@user.Name</option>
+            }
+        </select>
+        <span asp-validation-for="@Model.IdPropietaryUser" class="text-danger"></span>
+    </div>
+    
+    <div class="form-group" style="margin-top: 10px;">
+        <button type="submit" class="btn btn-primary">Send</button>
+    </div>
+</form>
+
+@section Scripts { <partial name="_ValidationScriptsPartial" /> }

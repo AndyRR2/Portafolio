@@ -1,0 +1,158 @@
+Programador: Andy Alejandro Rodriguez Rodriguez
+Git: https://github.com/TallerDeLenguajes1/tl2-tp10-2023-AndyRR2/tree/main/Proyect
+
++ Controladores, controles de Login y Niveles de Acceso:
+
+UserController:
+    *Index: -Permitido para all users Logueados
+
+    *AddUser: -Solo permitido para users Logueados que sean Administradores.
+
+    *EditUser: -Debe estar logueado
+                    -Un Administrador puede editar cualquier user.
+                    -Un user Simple puede editar solo su propio user.
+    
+    *DeleteUser: -Debe estar logueado
+                      -Un Administrador puede eliminar cualquier user.
+                      -Un user Simple puede eliminar solo su propio user.
+
+TableroController:
+    *Index: -Debe estar Logueado
+            -Solo el Administrador tiene permitido ver all tableros
+            -Un Administrador puede ver los tableros de cualquier user por individual
+            -Un user Simple puede ver solo los tableros donde es user propietario o tiene una TasK asignada
+    
+    *AddBoard: -Solo permitido para users Logueados que sean Administradores.
+    
+    *EditBoard: -Debe estar logueado
+                    -Un Administrador puede editar cualquier board.
+                    -Un user Simple puede editar un board solo si es el user propietario.
+    
+    *DeleteBoard: -Debe estar logueado
+                      -Un Administrador puede eliminar cualquier board.
+                      -Un user Simple puede eliminar un board solo si es el user propietario. 
+
+TaskController:
+    *Index: -Debe estar Logueado
+            -Solo el Administrador tiene permitido ver todas las Tasks
+            -Un Administrador puede ver las Tasks de cualquier board por individual
+            -Un user Simple solo puede ver las Tasks de los tableros donde es user propietario
+             o tiene una TasK asignada o es propietario de la TasK
+    
+    *AddTask: -Solo permitido para users Logueados que sean Administradores.
+    
+    *EditTask: -Debe estar logueado
+                  -Un Administrador puede editar cualquier TasK.
+                  -Un user Simple puede editar una TasK solo si es el user propietario, los asignados no.
+    
+    *DeleteTask: -Debe estar logueado
+                    -Un Administrador puede eliminar cualquier TasK.
+                    -Un user Simple puede eliminar una TasK solo si es el user propietario, los asignados no. 
+    
+    *AssignTask: -Debe estar logueado
+                   -Un Administrador puede asignar un user a cualquier TasK.
+                   -Un user Simple puede asignar un user a una TasK si es el user propietario. 
+
+    *ChangeTaskStat: -Debe estar logueado
+                         -Un Administrador puede cambiar el status de cualquier TasK.
+                         -Un user Simple puede cambiar el status de una TasK solos si es el user propietario o asignado.
+
+
++ Repositorios, funcionamiento en general:
+
+*UserRepository:
+        -public List<Usuario> GetAll();
+                Obtiene all users de la BD
+
+        -public Usuario GetById(int? idUsuario);
+                Obtiene un user segun su id
+
+        -public void Create(Usuario newUser);
+                Crea un user segun un objeto user
+
+        -public void Update(Usuario newUser);
+                Actualiza un user segun un objeto user
+
+        -public void Remove(int? idUsuario);
+                Elimina un user segun su id
+
+(******)-public bool UserExists(string? userName);
+                Verifica si existe un user con el mismo name, control utilizado antes de crear un user
+
+*BoardRepository:
+        -public List<Board> GetAll();
+                Obtiene all tableros de la BD
+
+        -public Board GetById(int? idBoard);
+                Obtiene un board segun su id
+
+        -public void Create(Board newBoard);
+                Crea un board segun un objeto board
+
+        -public void Update(Board newBoard);
+                Actualiza un board segun un objeto board
+
+        -public void Remove(int? idBoard);
+                Elimina un board segun su id
+
+(******)-public void Disable(int? idBoard);
+                Inhabilita un board segun su id, se utiliza al eliminar el user propietario del mismo
+
+(******)-public List<Board> GetByOwnerUser(int? idUsuario);
+                Obtiene los tableros que son propiedad de un user segun el id del user, se utiliza para mostrar los tableros
+                de los users por individual
+
+(******)-public bool ChechAsignedTask(int? idUsuario, int? idBoard);
+                Verifica si el board tiene alguna TasK que tenga como propietario al user dado o este esta asignado
+                Se utiliza para que los users Simple solo puedan ver las Tasks d eun board que tenga esas Tasks
+
+(******)-public List<Board> GetByUserAsignedTask(int? idUsuario);
+                Obtiene los tableros en donde un user tiene una TasK asignada segun el id del user, se utiliza para 
+                mostrar los tableros de los users por individual
+
+(******)-public bool BoardExists(string? boardName);
+                Verifica si existe un board con el mismo name, control utilizado antes de crear un board
+
+*TaskRepository:
+        -public List<TasK> GetAll();
+                Obtiene todas las Tasks de la BD
+
+        -public TasK GetById(int? idTask);
+                Obtiene una tareasegun su id
+
+        -public void Create(TasK newTask);
+                Crea una TasK segun un objeto TasK
+
+        -public void Update(TasK newTask);
+                Actualiza una TasK segun un objeto TasK
+
+        -public void Remove(int? idTask);
+                Elimina una TasK segun su id
+
+(******)-public void Assign(int? idTask, int? idUsuario);
+                Asigna un user a una TasK segun sus id
+
+(******)-public void ChangeStatus(TasK TasK);
+                Cambia el status de una TasK segun un objeto TasK
+
+(******)-public void Disable(int? idTask, int? idBoard);
+                Inhabilita una TasK segun su id y:
+                        -si el idBoard es null significa que el board se Borro, por lo cual queda como No Assigned 
+                        -si el idBoard no es null significa que el board solo se inhabilito, por lo cual la TasK queda con el id del board correspondiente
+                        se toma la decición de hacerlo de esta manera ya que como Admin se podria editar el board y poner otro user como propietario
+                        por lo tanto podrian continuarse las Tasks
+
+(******)-public List<TasK> GetByOwnerBoard(int? idBoard);
+                Obtiene las Tasks que estan en un board segun el id del board, se utiliza para mostrar las Tasks
+                de los tableros por individual
+                Se usa para inhabilitar las Tasks de ese board
+
+(******)-public List<TasK> GetByOwnerUser(int? idUsuario);
+                Obtiene las Tasks que son propiedad de un user segun el id del user, se utiliza para mostrar los tableros
+                de los users por individual
+                Se usa para inhabilitar las Tasks de ese user
+
+(******)-public bool TaskExists(string? TaskName);
+                Verifica si existe una TasK con el mismo name, control utilizado antes de crear una TasK
+
+

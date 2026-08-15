@@ -1,0 +1,43 @@
+@{ 
+    ViewData["Title"] = "Edit Board";
+}
+
+@model Proyect.ViewModels.EditBoardViewModel
+
+<h1>@ViewData["Title"]</h1>
+<form asp-controller="Board" asp-action="EditBoardFromForm" method="post">
+    <input hidden asp-for="@Model.Id">
+    <div class="form-group" style="max-width: 200px;">
+        <label asp-for="@Model.IdPropietaryUser">User Propietary</label>
+        <select asp-for="@Model.IdPropietaryUser" class="form-control">
+            <option value="">Select Propietary</option>
+            @foreach (var user in Model.Users)
+            {
+                <option value="@user.Id">@user.Name</option>
+            }
+        </select>
+        <span asp-validation-for="@Model.IdPropietaryUser" class="text-danger"></span>
+    </div>
+    <div class="form-group" style="max-width: 200px;">
+        <label asp-for="@Model.Name"></label>
+        <input asp-for="@Model.Name" class="form-control" id="name" />
+        <span asp-validation-for="@Model.Name" class="text-danger"></span>
+    </div>
+    <div class="form-group" style="max-width: 200px;">
+        <label asp-for="@Model.Description"></label>
+        <input asp-for="@Model.Description" class="form-control" id="description" />
+        <span asp-validation-for="@Model.Description" class="text-danger"></span>
+    </div>
+    <div class="form-group" style="max-width: 200px;">
+        <label asp-for="@Model.BoardStatus"></label>
+        <select asp-for="@Model.BoardStatus" asp-items="Html.GetEnumSelectList<BoardStatus>()" class="form-control">
+            <option value="">Select Status</option>
+        </select>
+        <span asp-validation-for="@Model.BoardStatus" class="text-danger"></span> 
+    </div>
+    <div class="form-group" style="margin-top: 10px;">
+        <button type="submit" class="btn btn-primary">Send</button>
+    </div>
+</form>
+
+@section Scripts { <partial name="_ValidationScriptsPartial" /> }

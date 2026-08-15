@@ -1,0 +1,50 @@
+@{
+    ViewData["Title"] = "Users";
+}
+
+@model List<Proyect.ViewModels.ListUserViewModel>
+@if(TempData["Message"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @TempData["Message"]
+    </div>
+}
+<h1>@ViewData["Title"]</h1>
+
+<div class="table-container">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <div class="action-buttons">
+                    <th>
+                        <a class="btn btn-success" asp-controller="UseR" asp-action="AddUser">Add User</a>
+                    </th>
+                    <th>
+                        <a class="btn btn-info" asp-controller="Board" asp-action="Index" asp-route-idUser=null>See all Boards (Administrator)</a>
+                    </th>
+                </div>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in Model)
+            {
+                <tr>
+                    <td>@user.Name</td>
+                    <td>
+                        <div class="action-buttons">
+                            <a class="btn btn-info" asp-controller="Board" asp-action="Index" asp-route-idUser="@user.Id">See Boards</a>
+                            <a class="btn btn-primary" asp-controller="UseR" asp-action="EditUser" asp-route-idUser="@user.Id">Edit</a>
+                            <a class="btn btn-danger" asp-controller="UseR" asp-action="DeleteUser" asp-route-idUser="@user.Id" onclick="return confirm('Are you sure you want to delete the user?')">Delete</a>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+@section Scripts {<partial name="_ValidationScriptsPartial" />}

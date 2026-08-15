@@ -1,0 +1,31 @@
+@{ 
+    ViewData["Title"] = "Add User";
+}
+
+@model Proyect.ViewModels.CreateUserViewModel
+
+<h1>@ViewData["Title"]</h1>
+<form asp-controller="UseR" asp-action="AddUserFromForm" method="post">
+    <div class="form-group" style="max-width: 200px;">
+        <label asp-for="@Model.Name"></label>
+        <input asp-for="@Model.Name" class="form-control" id="name" />
+        <span asp-validation-for="@Model.Name" class="text-danger"></span>   
+    </div>
+    <div class="form-group" style="max-width: 200px;">
+        <label asp-for="@Model.Password"></label>
+        <input asp-for="@Model.Password" class="form-control" id="password" />
+        <span asp-validation-for="@Model.Password" class="text-danger"></span>   
+    </div>
+    <div class="form-group" style="max-width: 200px;">
+        <label asp-for="@Model.AccessLevel"></label>
+        <select asp-for="@Model.AccessLevel" asp-items="Html.GetEnumSelectList<AccessLevel>()" class="form-control">
+            <option value="">Select Level</option>
+        </select>
+        <span asp-validation-for="@Model.AccessLevel" class="text-danger"></span> 
+    </div>
+    <div class="form-group" style="margin-top: 10px;">
+        <button type="submit" class="btn btn-primary">Send</button>
+    </div>
+</form>
+
+@section Scripts { <partial name="_ValidationScriptsPartial" /> }

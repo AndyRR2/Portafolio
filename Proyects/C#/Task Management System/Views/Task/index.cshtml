@@ -1,0 +1,60 @@
+@{
+    ViewData["Title"] = "Tasks";
+}
+
+@model List<Proyect.ViewModels.ListTaskViewModel>
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="table-container">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <div class="action-buttons">
+                    <th>
+                        <a class="btn btn-success" asp-controller="TasK" asp-action="AddTask">Add Task</a>
+                        <a class="btn btn-info" asp-controller="UseR" asp-action="Index" asp-route-idBoard=null>Return to Users</a>
+                    </th>
+                </div>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <th>Status</th>
+                <th>Description</th>
+                <th>Color</th>
+                <th>Board</th>
+                <th>User Assigned</th>
+                <th>User Propietary</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+             @foreach (var TasK in Model)
+            {
+                <tr>
+                    <td>@TasK.Name</td>
+                    <td>@TasK.TaskStat</td>
+                    <td>@TasK.Description</td>
+                    <td class"td-color">
+                        <div class="circulo-color @TasK.Color.ToString()"></div>
+                    </td>
+                    <td>@(TasK.IdBoard != null ? TasK.BoardName : "No Assigned")</td>
+                    <td>@(TasK.IdAssignedUser != null ? TasK.AssignedUserName : "No Assigned")</td>
+                    <td>@(TasK.IdPropietaryUser != null ? TasK.PropietaryUserName : "No Assigned")</td>
+                    <td>
+                        <div class="action-buttons">
+                            <a class="btn btn-primary" asp-controller="TasK" asp-action="ChangeTaskStatus" asp-route-idTask="@TasK.Id">Change Status</a>
+                            <a class="btn btn-primary" asp-controller="TasK" asp-action="AssignTask" asp-route-idTask="@TasK.Id">Assign User</a>
+                        </div>
+                        <div class="action-buttons" style="margin-top: 10px;">
+                            <a class="btn btn-primary" asp-controller="TasK" asp-action="EditTask" asp-route-idTask="@TasK.Id">Edit</a>
+                            <a class="btn btn-danger" asp-controller="TasK" asp-action="DeleteTask" asp-route-idTask="@TasK.Id" onclick="return confirm('Are you sure you want to delete the item?')">Delete</a> 
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+@section Scripts {<partial name="_ValidationScriptsPartial" />}

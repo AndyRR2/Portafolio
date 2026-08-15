@@ -1,0 +1,60 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+/*Edit Proyect*/
+.Azul { background-color: blue !important;}
+.Rojo { background-color: red !important; }
+.Amarillo { background-color: yellow !important; }
+.Verde { background-color: green !important; }
+.Rosa { background-color: pink !important; }
+.Morado { background-color: purple !important; }
+
+.circulo-color {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 0.2px solid black;
+}
+
+.table td-color {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.color-list {
+  list-style-type: none;
+  padding: 0;
+  max-width: 200px;
+  overflow: hidden; 
+}
+
+.color-list li {
+  border-radius: 50%;
+  margin-bottom: 10px;
+  width: 40px; 
+  height: 40px; 
+  float: left; 
+  margin-right: 10px; 
+  border: 0.2px solid black;
+}
+
+

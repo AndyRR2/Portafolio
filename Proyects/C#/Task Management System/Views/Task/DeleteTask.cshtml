@@ -1,0 +1,11 @@
+@{ 
+    ViewData["Title"] = "Delete TasK";
+}
+
+@model Proyect.Models.TasK
+<h2>Confirm deleting</h2>
+
+<form asp-controller="TasK" asp-action="DeleteTaskFromForm">
+    <input name="idTaskToDelete" type="hidden" value="@Model.Id" />
+    <button type="submit" class="btn btn-danger">Delete</button>
+</form>
