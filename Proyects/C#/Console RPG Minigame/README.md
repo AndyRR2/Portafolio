@@ -1,4 +1,5 @@
 # RPG Console Game — C# Project
+
 Programmer: Andy Alejandro Rodriguez Rodriguez
 
 Single-player RPG console game where the player chooses a class and progresses through battles, leveling up, collecting items, and facing increasingly difficult enemies. The project focuses on gameplay logic, stats calculation, enemy scaling, and basic data persistence.
