@@ -21,10 +21,10 @@ The program reads sales data from a CSV file, validates the required columns, pe
 
 The project is organized into functions with different responsibilities:
 
-* **`leer_csv()`** — Reads the CSV file using NumPy.
+* **`read_csv()`** — Reads the CSV file using NumPy.
 * **`validate_columns()`** — Checks that the required columns exist.
 * **`data_upload()`** — Loads and validates the data.
-* **`mostrar_datos()`** — Displays the loaded data.
+* **`show_data()`** — Displays the loaded data.
 * **`analysis()`** — Performs numerical analysis.
 * **`plot_chart()`** — Generates the charts.
 
