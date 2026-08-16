@@ -1,10 +1,11 @@
 # CSV Analyzer + Charts — Python Project
 
+**Programmer:** Andy Alejandro Rodriguez Rodriguez
+
 Small data analysis and visualization project developed with **Python**, **NumPy**, and **Matplotlib**.
 
 The program reads sales data from a CSV file, validates the required columns, performs basic numerical analysis, and generates charts to visualize the results.
 
-**Programmer:** Andy Alejandro Rodriguez Rodriguez
 
 # Features
 
