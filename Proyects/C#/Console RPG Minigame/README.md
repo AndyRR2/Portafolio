@@ -1,4 +1,6 @@
-# 🕹️ RPG Console Game — C# Project
+# RPG Console Game — C# Project
+
+Programmer: Andy Alejandro Rodriguez Rodriguez
 
 Single-player RPG console game where the player chooses a class and progresses through battles, leveling up, collecting items, and facing increasingly difficult enemies. The project focuses on gameplay logic, stats calculation, enemy scaling, and basic data persistence.
 
@@ -59,14 +61,14 @@ If these files do not exist, you will need to start a new game.
 
 If you try to use Power or Heal with insufficient MP, you **lose the turn** and the enemy attacks.
 
-## 🎮 Gameplay Tips
+## Gameplay Tips
 
 - Use Power Attack or Heal at the right moment  
 - Before leveling up, try to **spend most of your MP**, since it fully restores  
 - With high-level enemies, **healing multiple times** can be stronger than using Power Attack  
 - Mages have very efficient MP usage — take advantage of it  
 
-## 🚀 Project Goal
+## Project Goal
 
 This project was created to practice:
 
