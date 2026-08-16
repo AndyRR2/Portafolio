@@ -1,12 +1,11 @@
 # Task Management System — .NET / C# Project
+**Programmer:** Andy Alejandro Rodriguez Rodriguez
 
 Task management system developed with **.NET and C#**, designed to manage users, boards, and tasks through a role-based access system.
 
 The project follows a layered structure based on **Controllers, Repositories, Models, ViewModels, and Views**, separating the application's business logic, data access, data models, and user interface.
 
 The system allows administrators and regular users to manage boards and tasks according to their permissions, while controlling access to information depending on ownership and task assignments.
-
-**Programmer:** Andy Alejandro Rodriguez Rodriguez
 
 # Guide
 
