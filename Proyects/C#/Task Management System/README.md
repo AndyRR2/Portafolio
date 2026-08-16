@@ -8,8 +8,6 @@ The system allows administrators and regular users to manage boards and tasks ac
 
 **Programmer:** Andy Alejandro Rodriguez Rodriguez
 
-**Git Repository:** [GitHub — Task Management System](https://github.com/TallerDeLenguajes1/tl2-tp10-2023-AndyRR2/tree/main/Proyect?utm_source=chatgpt.com)
-
 # Guide
 
 The project is developed using **.NET and C#** following an MVC-style architecture.
